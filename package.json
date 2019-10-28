@@ -8,7 +8,9 @@
     "test:watch": "npm test -- --watch",
     "storybook": "start-storybook -p 9001",
     "deploy-storybook": "storybook-to-ghpages",
-    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "predeploy": "yarn webpack & cp index.dist.html dist/index.html",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,11 @@
   "bugs": {
     "url": "https://github.com/reactjs/redux/issues"
   },
-  "homepage": "http://redux.js.org",
+  "homepage": "https://tongbin.github.io/example-storybook-for-react",
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "classnames": "^2.1.2",
+    "gh-pages": "^2.1.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-redux": "^4.2.1",
