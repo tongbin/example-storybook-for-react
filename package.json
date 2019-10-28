@@ -10,7 +10,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "predeploy": "yarn webpack & cp index.dist.html dist/index.html",
-    "deploy": "gh-pages -d dist"
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
